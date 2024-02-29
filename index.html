@@ -25,11 +25,11 @@ h2 {
     font-size: 1.4em;
     font-weight: normal;
 }
-h3 {
+/* h3.title {
     color:rgb(255 160 70);
     font-size: 1em;
     font-weight: 200;
-}
+} */
 a {
     text-decoration: none;
     color: rgb(212, 190, 89)
@@ -48,12 +48,6 @@ li {
     margin-right: 15em;
     padding-left: 1em;
 }
-@media only screen and (max-width: 1440px) {
-    .content {
-        margin-left: 10em;
-        margin-right: 1em;
-    }
-}
 .icon-box {
     display:inline-flex;
     align-items: center;
@@ -64,9 +58,12 @@ li {
 .panel {
     position: absolute;
     top: 0;
-    width: 10em;
+    width: 15em;
     left: 0;
     background: linear-gradient(rgba(27 27 27 / 90%) 80%,transparent);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .logo {
     width: 10em;
@@ -82,38 +79,51 @@ li {
     height: 160px;
     text-decoration: none;
 }
-.labels {
-    margin: 0 0.6em 0 0.7em;
+/* .labels {
+    margin: 0 0.5em 0 0.5em;
     padding: 0.25em 0;
-    direction: ltr;
-}
-.menu-heading {
-    color: rgba(210, 210, 210, 1);
-    background: none;
+} */
+.panel h2 {
+    color: white;
     border-bottom: 1pt dotted rgb(117, 57, 5);
-    margin: 0.5 em 0 0 0.66667;
-    border: 0;
     padding: 0.25em 0;
     font-size: 0.75em;
     font-weight: normal;
     cursor:default;
     text-align: center;
 }
-.menu-content {
+/* .menu-content {
     margin-left: 0.5em;
     padding-top: 0;
-}
-.menu-content-list ul {
+} */
+/* ul.menu-content-list {
     list-style: none;
     margin: 0;
     padding-top: 0.3em;
+} */
+.panel ul {
+    list-style: none;
+    margin: 0;
 }
-.list-item li {
+.panel ul li  {
+    margin: 0;
+    padding: 0.25 em;
+    font-size: 0.75em;
+    line-height: 1.25em;
+    word-wrap: break-word;
+}
+/* li.list-item {
     margin: 0;
     padding: 0.25em 0;
     font-size: 0.75em;
-    line-height: 1.125em;;
+    line-height: 1.125em;
     word-wrap: break-word;
+} */
+@media only screen and (max-width: 1440px) {
+    .content {
+        margin-left: 10em;
+        margin-right: 0.5em;
+    }
 }
 </style>
 </head>
@@ -121,7 +131,7 @@ li {
 <div class="content">
     <h1 class="header">Astarion Approval</h1>
     <h2>Act Two</h2>
-    <h3>Ruined Battlefield</h3>
+    <h3 style="color:rgb(255, 160, 70); font-size:1em; font-weight: 200;">Ruined Battlefield</h3>
         <ul>
             <li>Convince Warrior Gronag to fetch the bone in the shadows</li>
             <li>Successfully convince the hyena in the convoy that they don't belong to the goblins</li>
@@ -130,21 +140,21 @@ li {
             <li>Persuade Madeline to stab herself</li>
             <li>Tell Madeline to prove she's sorry</li>
         </ul>
-    <h3>Reithwin Tollhouse</h3>
+    <h3 class="title">Reithwin Tollhouse</h3>
         <ul>
             <li>Beat <a href="https://bg3.wiki/wiki/Gerringothe_Thorm" title="Gerringothe Thorm" target="_blank">Gerringothe Thorm</a> through either persuasion or deception</li>
         </ul>
-    <h3>The Waning Moon</h3>
+    <h3 class="title">The Waning Moon</h3>
         <ul>
             <li>Drink with <a href="https://bg3.wiki/wiki/Thisobald_Thorm" target="_blank" title="Thisobald Thorm">Thisobald Thorm</a> up to three times</li>
             <li>Tell him your stories up to two times</li>
         </ul>
-    <h3>House of Healing</h3>
+    <h3 class="title">House of Healing</h3>
         <ul>
             <li>Persuade <a href="https://bg3.wiki/wiki/Malus_Thorm" target="_blank" title="Malus Thorm">Malus Thorm</a> to have the Sisters practice on each other</li>
             <li>Persuade <a href="https://bg3.wiki/wiki/Malus_Thorm" target="_blank" title="Malus Thorm">Malus Thorm</a> to have the Sisters practice on him</li>
         </ul>
-    <h3>Moonrise Towers</h3>
+    <h3 class="title">Moonrise Towers</h3>
         <ul>
             <li>Sever the connection between <a href="https://bg3.wiki/wiki/Linsella" target="_blank" title="Linsella">Linsella</a> and <a href="https://bg3.wiki/wiki/Barnabus" target="_blank" title="Barnabus">Barnabus</a></li>
             <li>Tell <a href="https://bg3.wiki/wiki/Araj_Oblodra" target="_blank" title="Araj Oblodra">Araj Oblodra</a> that Astarion is his own person</li>
@@ -156,7 +166,7 @@ li {
             <li>Invite <a href="https://bg3.wiki/wiki/Minthara" target="_blank" title="Minthara">Minthara</a> to your camp after saving her</li>
             <li>When talking to <a href="https://bg3.wiki/wiki/Minthara" target="_blank" title="Minthara">Minthara</a> after killing <a href="https://bg3.wiki/wiki/Ketheric_Thorm" target="_blank" title="Ketheric Thorm">Ketheric Thorm</a>, tell her "We make a good team"</li>
         </ul>
-    <h3>Gauntlete of Shar</h3>
+    <h3 class="title">Gauntlete of Shar</h3>
         <ul>
             <li>Persuade <a href="https://bg3.wiki/wiki/Balthazar" target="_blank">Balthazar</a> to give you the bell to summon <a href="https://bg3.wiki/wiki/Flesh" target="_blank">Flesh</a>
                 <ul>
@@ -174,7 +184,7 @@ li {
         <li>If you agreed to help <a href="https://bg3.wiki/wiki/Yurgir" target="_blank">Yurgir</a>, reassure <a href="https://bg3.wiki/wiki/Astarion" target="_blank">Astarion</a> that this is all part of the plan</li>
         <li>Detect thoughts on the Hoarding Merregon and ask for the potions used to charm the Displacer Beast</li>
         </ul>
-    <h3>Camp/Conversation</h3>
+    <h3 class="title">Camp/Conversation</h3>
         <ul>
             <li>Tell him it makes sense to enlist <a href="https://bg3.wiki/wiki/Raphael" target="_blank">Raphael's</a> help with investigating his scars</li>
             <li>Tell him that of course you'll help hunt down and kill <a href="https://bg3.wiki/wiki/Cazador" target="_blank">Cazador</a></li>
@@ -182,26 +192,33 @@ li {
         </ul>
     <h1 class="header">Disapproval</h1>
     <h2>Act Two</h2>
-    <h3>Ruined Battlefield</h3>
+    <h3 class="title">Ruined Battlefield</h3>
 </div>
+
 <div class="panel">
+
+    <!-- Logo -->
     <div class="logo" role="banner">
         <a class="ast-logo" href="/" title="Home"></a>
     </div>
-    <nav class="labels">
-        <h3 class="menu-heading">
-            <span>Navigation</span>
-        </h3>
-        <div class="menu-content">
-            <ul class="menu-content-list">
-                <li class="list-item">
-                    <a href="/" title="what">
-                        <span>what</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+
+    <!-- Nav heading -->
+    <h2>
+        <a href="/" title="act two">Act Two</a>
+    </h2>
+
+    <!-- Nav links list -->
+    <ul>
+        <li>
+            <a href="/" title="ruined battlefield">
+                <span>Ruined Battlefield</span>
+            </a>
+        </li>
+        <li>
+            <a href="/" title="act two">Act Two</a>
+        </li>               
+    </ul>
+
 </div>
 </body>
 </html>
