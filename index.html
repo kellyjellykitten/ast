@@ -13,7 +13,15 @@ body {
     background-attachment: fixed;
     background-position: top;
 }
-.header {
+.content {
+    border: 1px solid rgb(65, 35, 8);
+    background: rgba(35, 35, 35, 1);
+    color: rgba(210, 210, 210, 1);
+    margin-left: 16em;
+    margin-right: 15em;
+    padding-left: 2em;
+}
+.content h1 {
     text-align: left;
     font-size: 1.75em;
     text-decoration: underline;
@@ -21,49 +29,44 @@ body {
     text-decoration-thickness: 3px;
     font-weight: normal;
 }
-h2 {
+.content h2 {
     font-size: 1.4em;
     font-weight: normal;
 }
-/* h3.title {
-    color:rgb(255 160 70);
+.content h3 {
     font-size: 1em;
     font-weight: 200;
-} */
-a {
-    text-decoration: none;
-    color: rgb(212, 190, 89)
+    color: rgb(255, 160, 70);
 }
-a:hover {
+.content a {
+    text-decoration: none;
+    color: rgb(212, 190, 89);
+    text-align: center;
+}
+.content a:hover {
     text-decoration: underline;
 }
-li {
+.content li {
     line-height: 1.65;
 }
-.content {
-    border: 1px solid rgb(65, 35, 8);
-    background: rgba(35, 35, 35, 1);
-    color: rgba(210, 210, 210, 1);
-    margin-left: 15em;
-    margin-right: 15em;
-    padding-left: 1em;
+.panel {
+    position: absolute;
+    margin-top: 0.5em;
+    top: 0;
+    width: 15em;
+    margin-left: 0.5em;
+    background: linear-gradient(#615f5f, #9198e5, #000000bd);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+/* linear-gradient(rgba(27 27 27 / 90%) 80%,transparent) */
 .icon-box {
     display:inline-flex;
     align-items: center;
     justify-content: center;
     min-width: 26px;
     height: 26px;
-}
-.panel {
-    position: absolute;
-    top: 0;
-    width: 15em;
-    left: 0;
-    background: linear-gradient(rgba(27 27 27 / 90%) 80%,transparent);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 .logo {
     width: 10em;
@@ -79,46 +82,55 @@ li {
     height: 160px;
     text-decoration: none;
 }
-/* .labels {
-    margin: 0 0.5em 0 0.5em;
-    padding: 0.25em 0;
-} */
 .panel h2 {
-    color: white;
-    border-bottom: 1pt dotted rgb(117, 57, 5);
+    border-bottom: 1pt solid rgb(160, 17, 7);
     padding: 0.25em 0;
-    font-size: 0.75em;
-    font-weight: normal;
-    cursor:default;
+    font-size: 1.75em;
+    font-weight: 600;
     text-align: center;
 }
-/* .menu-content {
-    margin-left: 0.5em;
-    padding-top: 0;
-} */
-/* ul.menu-content-list {
-    list-style: none;
-    margin: 0;
-    padding-top: 0.3em;
-} */
+.panel h3 {
+    padding: 0.25em 0;
+    font-size: 1.35em;
+    font-weight: 550;
+    margin-top: 0px;
+    margin-bottom: 2em;
+    
+}
 .panel ul {
     list-style: none;
-    margin: 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-inline-start: 0px;
+    display: inline-block;
 }
 .panel ul li  {
     margin: 0;
-    padding: 0.25 em;
-    font-size: 0.75em;
+    padding: 0.25em;
+    font-size: 1em;
     line-height: 1.25em;
     word-wrap: break-word;
 }
-/* li.list-item {
-    margin: 0;
-    padding: 0.25em 0;
-    font-size: 0.75em;
-    line-height: 1.125em;
-    word-wrap: break-word;
-} */
+.panel a {
+    text-decoration: none;
+    color: rgb(219, 212, 212);
+    display: flex;
+    justify-content: center;
+}
+.panel a:hover {
+    color: rgb(160, 17, 7);
+    font-size: 110%;
+}
+hr {
+    border: 0;
+    clear: both;
+    display: block;
+    width: 75%;
+    background-color: rgb(160, 17, 7);
+    height: 2px;
+    margin-top: 1.75em;
+    margin-bottom: 1.5em;
+} 
 @media only screen and (max-width: 1440px) {
     .content {
         margin-left: 10em;
@@ -127,11 +139,12 @@ li {
 }
 </style>
 </head>
+
 <body>
 <div class="content">
-    <h1 class="header">Astarion Approval</h1>
+    <h1>Astarion Approval</h1>
     <h2>Act Two</h2>
-    <h3 style="color:rgb(255, 160, 70); font-size:1em; font-weight: 200;">Ruined Battlefield</h3>
+    <h3>Ruined Battlefield</h3>
         <ul>
             <li>Convince Warrior Gronag to fetch the bone in the shadows</li>
             <li>Successfully convince the hyena in the convoy that they don't belong to the goblins</li>
@@ -140,21 +153,21 @@ li {
             <li>Persuade Madeline to stab herself</li>
             <li>Tell Madeline to prove she's sorry</li>
         </ul>
-    <h3 class="title">Reithwin Tollhouse</h3>
+    <h3>Reithwin Tollhouse</h3>
         <ul>
             <li>Beat <a href="https://bg3.wiki/wiki/Gerringothe_Thorm" title="Gerringothe Thorm" target="_blank">Gerringothe Thorm</a> through either persuasion or deception</li>
         </ul>
-    <h3 class="title">The Waning Moon</h3>
+    <h3>The Waning Moon</h3>
         <ul>
             <li>Drink with <a href="https://bg3.wiki/wiki/Thisobald_Thorm" target="_blank" title="Thisobald Thorm">Thisobald Thorm</a> up to three times</li>
             <li>Tell him your stories up to two times</li>
         </ul>
-    <h3 class="title">House of Healing</h3>
+    <h3>House of Healing</h3>
         <ul>
             <li>Persuade <a href="https://bg3.wiki/wiki/Malus_Thorm" target="_blank" title="Malus Thorm">Malus Thorm</a> to have the Sisters practice on each other</li>
             <li>Persuade <a href="https://bg3.wiki/wiki/Malus_Thorm" target="_blank" title="Malus Thorm">Malus Thorm</a> to have the Sisters practice on him</li>
         </ul>
-    <h3 class="title">Moonrise Towers</h3>
+    <h3>Moonrise Towers</h3>
         <ul>
             <li>Sever the connection between <a href="https://bg3.wiki/wiki/Linsella" target="_blank" title="Linsella">Linsella</a> and <a href="https://bg3.wiki/wiki/Barnabus" target="_blank" title="Barnabus">Barnabus</a></li>
             <li>Tell <a href="https://bg3.wiki/wiki/Araj_Oblodra" target="_blank" title="Araj Oblodra">Araj Oblodra</a> that Astarion is his own person</li>
@@ -166,7 +179,7 @@ li {
             <li>Invite <a href="https://bg3.wiki/wiki/Minthara" target="_blank" title="Minthara">Minthara</a> to your camp after saving her</li>
             <li>When talking to <a href="https://bg3.wiki/wiki/Minthara" target="_blank" title="Minthara">Minthara</a> after killing <a href="https://bg3.wiki/wiki/Ketheric_Thorm" target="_blank" title="Ketheric Thorm">Ketheric Thorm</a>, tell her "We make a good team"</li>
         </ul>
-    <h3 class="title">Gauntlete of Shar</h3>
+    <h3>Gauntlete of Shar</h3>
         <ul>
             <li>Persuade <a href="https://bg3.wiki/wiki/Balthazar" target="_blank">Balthazar</a> to give you the bell to summon <a href="https://bg3.wiki/wiki/Flesh" target="_blank">Flesh</a>
                 <ul>
@@ -184,22 +197,22 @@ li {
         <li>If you agreed to help <a href="https://bg3.wiki/wiki/Yurgir" target="_blank">Yurgir</a>, reassure <a href="https://bg3.wiki/wiki/Astarion" target="_blank">Astarion</a> that this is all part of the plan</li>
         <li>Detect thoughts on the Hoarding Merregon and ask for the potions used to charm the Displacer Beast</li>
         </ul>
-    <h3 class="title">Camp/Conversation</h3>
+    <h3>Camp/Conversation</h3>
         <ul>
             <li>Tell him it makes sense to enlist <a href="https://bg3.wiki/wiki/Raphael" target="_blank">Raphael's</a> help with investigating his scars</li>
             <li>Tell him that of course you'll help hunt down and kill <a href="https://bg3.wiki/wiki/Cazador" target="_blank">Cazador</a></li>
             <li>Tell <a href="https://bg3.wiki/wiki/Arabella" target="_blank">Arabella</a> her parents are dead</li>
         </ul>
-    <h1 class="header">Disapproval</h1>
+    <h1>Disapproval</h1>
     <h2>Act Two</h2>
-    <h3 class="title">Ruined Battlefield</h3>
+    <h3>Ruined Battlefield</h3>
 </div>
 
 <div class="panel">
 
     <!-- Logo -->
     <div class="logo" role="banner">
-        <a class="ast-logo" href="/" title="Home"></a>
+        <div class="ast-logo" title="Asterion approves"></div>
     </div>
 
     <!-- Nav heading -->
@@ -211,13 +224,32 @@ li {
     <ul>
         <li>
             <a href="/" title="ruined battlefield">
-                <span>Ruined Battlefield</span>
+                Ruined Battlefield
             </a>
         </li>
         <li>
-            <a href="/" title="act two">Act Two</a>
-        </li>               
+            <a href="/">Reithwin Tollhouse</a>
+        </li>
+        <li>
+            <a href="/">The Waning Moon</a>
+        </li>
+        <li>
+            <a href="/">House of Healing</a>
+        </li>
+        <li>
+            <a href="/">Moonrise Towers</a>
+        </li>
+        <li>
+            <a href="/">Gauntlete of Shar</a>
+        </li>
+        <li>
+            <a href="/">Camp/Conversation</a>
+        </li>                       
     </ul>
+    <hr />
+    <h3>
+        <a href="">Disapproval</a>
+    </h3>
 
 </div>
 </body>
