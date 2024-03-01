@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Asterion</title>
+<title>Astarion</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -17,9 +17,10 @@ body {
     border: 1px solid rgb(65, 35, 8);
     background: rgba(35, 35, 35, 1);
     color: rgba(210, 210, 210, 1);
-    margin-left: 16em;
     margin-right: 15em;
+    margin-left: 16em;
     padding-left: 2em;
+    padding-right: 2em;
 }
 .content h1 {
     text-align: left;
@@ -130,17 +131,54 @@ hr {
     height: 2px;
     margin-top: 1.75em;
     margin-bottom: 1.5em;
+}
+#topnav {
+    display:none
 } 
 @media only screen and (max-width: 1440px) {
     .content {
-        margin-left: 10em;
-        margin-right: 0.5em;
+        margin-left: 2em;
+        margin-right: 1em;
+    }
+    .panel {
+        display: none;
+    }
+    #topnav {
+        display:block;
+        overflow: hidden;
+        background-color: aliceblue;
+    }
+    #topnav a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    #topnav a:hover {
+        background-color: black;
+        color: white;
+    }
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .sticky + .content {
+        padding-top: 60px;
     }
 }
 </style>
 </head>
 
 <body>
+<div id="topnav">
+    <a href="/">Ruined Battlefield</a>
+    <a href="/">Reithwin Tollhouse</a>
+    <a href="/">The Waning Moon</a>
+</div>
 <div class="content">
     <h1>Astarion Approval</h1>
     <h2>Act Two</h2>
@@ -161,11 +199,6 @@ hr {
         <ul>
             <li>Drink with <a href="https://bg3.wiki/wiki/Thisobald_Thorm" target="_blank" title="Thisobald Thorm">Thisobald Thorm</a> up to three times</li>
             <li>Tell him your stories up to two times</li>
-        </ul>
-    <h3>House of Healing</h3>
-        <ul>
-            <li>Persuade <a href="https://bg3.wiki/wiki/Malus_Thorm" target="_blank" title="Malus Thorm">Malus Thorm</a> to have the Sisters practice on each other</li>
-            <li>Persuade <a href="https://bg3.wiki/wiki/Malus_Thorm" target="_blank" title="Malus Thorm">Malus Thorm</a> to have the Sisters practice on him</li>
         </ul>
     <h3>Moonrise Towers</h3>
         <ul>
@@ -252,5 +285,20 @@ hr {
     </h3>
 
 </div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var topnav = document.getElementById("topnav");
+var sticky = topnav.offsetTop;
+
+function myFunction() {
+    if (window.pageYOffset >= sticky) {
+        topnav.classList.add("sticky")
+    } else {
+        navbar.classList.remove("sticky");
+    }
+}
+</script>
 </body>
 </html>
